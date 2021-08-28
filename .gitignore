@@ -1,2 +1,2 @@
 *.pyc
-src/MiSitio/settings/local.py
+src/trivia_chaco/settings/local.py
