@@ -1,0 +1,24 @@
+{% extends "base/base.html" %}
+
+{% block titulo %}
+<title>Aniversario de la Provincia del Chaco</title>
+{% endblock titulo %}
+
+{% block contenido %}
+
+<main class="px-3">
+	{% if user.is_authenticated %}
+		{% if user.is_admin %}
+			<a href="{% url 'preguntas:crear-preg' %}" class="btn btn-primary my-2">Cargar Preguntas</a><br>
+			<a href="#" class="btn btn-primary my-2">Ver Resultados</a>
+		{% else %}
+			<a href="{% url 'niveles:listar-niveles' %}" class="btn btn-primary my-2">Comenzar</a>
+		{% endif %}
+	{% else %}
+		<a href="{% url 'usuarios:login' %}" class="btn btn-outline-warning">Iniciar sesion</a>   <--    ó   -->   
+		<a href="#" class="btn btn-outline-success">Registrarse</a>
+	{% endif %}
+</main>
+
+{% endblock contenido %}
+

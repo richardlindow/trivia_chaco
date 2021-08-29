@@ -20,3 +20,4 @@ class Respuesta(models.Model):
 
 	def __str__(self):
 		return f'pregunta: {self.pregunta.texto}, respuesta: {self.texto}, es correcta: {self.es_correcto}'
+
